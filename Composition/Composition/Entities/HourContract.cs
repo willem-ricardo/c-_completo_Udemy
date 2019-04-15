@@ -21,5 +21,9 @@ namespace Composition.Entities
             Hour = hour;
         }
 
+        public double TotalValue()
+        {
+            return ValuePerHour * Hour;
+        }
     }
 }
