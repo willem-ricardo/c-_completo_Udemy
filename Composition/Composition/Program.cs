@@ -50,7 +50,7 @@ namespace Composition
             Console.WriteLine("Departamento: " + worker.Department.Name);
             Console.WriteLine("Provimentos em "
                 + mesAno + ": "
-                + worker.Income(mes, ano).ToString("F2", CultureInfo.InvariantCulture));
+                + worker.Income(ano, mes).ToString("F2", CultureInfo.InvariantCulture));
         }
     }
 }
