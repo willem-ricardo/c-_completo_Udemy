@@ -14,7 +14,7 @@ namespace Composition.Entities
         {
         }
 
-        HourContract(DateTime date, double value, int hour)
+        public HourContract(DateTime date, double value, int hour)
         {
             Date = date;
             ValuePerHour = value;
