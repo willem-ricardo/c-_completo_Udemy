@@ -27,7 +27,7 @@ namespace Composition
 
             for (int i = 1; i <= n; i++)
             {
-                Console.WriteLine($"Informe os dados do contrato #{i}:");
+                Console.WriteLine($"\nInforme os dados do contrato #{i}:");
                 Console.Write("Data (DD/MM/YYYY): ");
                 DateTime data = DateTime.Parse(Console.ReadLine());
                 Console.Write("Valor da hora trabalhada: ");
@@ -36,7 +36,7 @@ namespace Composition
                 int qtdeHoras = int.Parse(Console.ReadLine());
 
                 HourContract contrato = new HourContract(data, precoHora, qtdeHoras);
-                worker.Contracts.Add(contrato);
+                worker.AddContract(contrato);
             }
 
             Console.WriteLine();
@@ -48,7 +48,9 @@ namespace Composition
             Console.WriteLine();
             Console.WriteLine("Nome: " + worker.Name);
             Console.WriteLine("Departamento: " + worker.Department.Name);
-            Console.WriteLine("Provimentos em " + mesAno + ": " + worker.Income(mes, ano));
+            Console.WriteLine("Provimentos em "
+                + mesAno + ": "
+                + worker.Income(mes, ano).ToString("F2", CultureInfo.InvariantCulture));
         }
     }
 }
